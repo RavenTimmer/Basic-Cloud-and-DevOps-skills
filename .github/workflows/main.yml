@@ -2,7 +2,7 @@ name: Build Test and push
 on: [push]
 env:
   IMAGE_NAME: student_service
-  REPO_NAME:
+  REPO_NAME: ${{ secrets.REGISTRY_USERNAME }}
 
 
 jobs:
@@ -58,5 +58,5 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
 
     - name: Push image to docker hub Container Registry
-      run: | 
+      run: |
           docker push $REPO_NAME/$IMAGE_NAME
