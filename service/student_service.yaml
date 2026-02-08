@@ -38,7 +38,7 @@ spec:
       - env:
         - name: MONGO_URI
           value: mongodb://mongo:27017
-        image: raventimmer/student_service
+        image: raventimmer/student_service:latest
         name: service
         imagePullPolicy: Always
         ports:
