@@ -1,6 +1,7 @@
 version: '3'
 services:
   student_service:
+    build: .
     image: student_service:latest
     restart: unless-stopped
     depends_on:
